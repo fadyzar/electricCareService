@@ -115,7 +115,7 @@ int readUserDetails()
     while (!feof(userFile))
     {
         fread(&user, sizeof(struct UserDetails), 1, userFile);
-        if (user.userNumber > 0)
+        if (userNumber > 0)
             userCounter++;
 
     }
@@ -200,7 +200,7 @@ int checkUser(int UserId, int userProdId) {
             printf("user name:%s\n", user.name);
             printf("---person id:%d\n", user.person_id);
             printf("---address:%s\n", user.address);
-            printf("---CustomerNumber: %d\n", user.userNumber);
+            printf("---CustomerNumber: %d\n", userNumber);
             printf("---prod id: %d\n", user.productId);
             printf("purchase Date: %d/%d/%d\n", user.purchseDate.day, user.purchseDate.month, user.purchseDate.year);
             printf("---Location Km: %d\n", user.Km);
